@@ -93,7 +93,7 @@ const RightSide = ({setSummary}) => {
         )}
 
         <div className="mainPageRightSideUploadFile">
-          <h3>Or upload the audio file of the recorded meeting<span>(coming soon)</span></h3>
+          <h3>Or upload the audio file<span>(coming soon)</span></h3>
           <div className="mainPageRightSideUploadFileBox">
             <p className="mainPageRightSideUploadFileGrayTxt">
               {fileName? `Added ${fileName}`: "MP3. Max 25mb."}
