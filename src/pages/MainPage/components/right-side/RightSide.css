@@ -1,0 +1,192 @@
+.mainPageRightSide {
+  padding: 48px 20px;
+  width: 48%;
+}
+
+.mainPageRightSideWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.mainPageRightSideTop {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mainPageRightSideTop h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #131228;
+}
+
+.mainPageRightSideTop p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  margin: 0;
+  color: #4d4d5c;
+}
+
+.mainPageRightSideInputBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 14px;
+  gap: 8px;
+  width: 100%;
+  height: max-content;
+  background: #ffffff;
+  border: 1px solid rgba(19, 18, 40, 0.08);
+  /* Shadow/xs */
+
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+
+.mainPageRightSideInputBoxLeftSide {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  /* identical to box height, or 200% */
+  width: 70%;
+  color: rgba(77, 77, 92, 0.6);
+}
+
+.mainPageRightSideInputBoxLeftSide p {
+  font-style: normal;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  /* identical to box height, or 200% */
+  color: rgba(77, 77, 92, 0.6);
+  margin: 0;
+}
+
+.mainPageRightSideInputBoxRightSide {
+  right: 0;
+}
+
+.mainPageRightSideSummarizeBtn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: 0.25px;
+  text-transform: capitalize;
+
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 16px;
+  width: max-content;
+  height: max-content;
+
+  /* Blue */
+
+  background: #1890ff;
+  border-radius: 6px;
+  border: none;
+}
+
+.mainPageRightSideUploadFile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.mainPageRightSideUploadFileBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 24px;
+  width: max-content;
+  height: max-content;
+  border: 1px dashed #b5bfc9;
+  border-radius: 6px;
+}
+
+.mainPageRightSideUploadFileGrayTxt {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: #7a8d9e;
+}
+
+.mainPageRightSideUploadFileBox div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 10px;
+
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+
+  border: 1px solid #1890ff;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: capitalize;
+  color: #1890ff;
+}
+
+.mainPageRightSideUploadFileBox div img {
+  height: 24px;
+  width: 24px;
+}
+
+.mainPageRightSideUploadFileBox div p {
+  margin: 0;
+}
+
+.mainPageRightSideUploadFileBox div input {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* Buttons */
+.audioActionBtn {
+  padding: 2px 6px;
+  margin-right: 8px;
+  width: max-content;
+  height: max-content;
+  background: #ffffff;
+  border: 1px solid #40a9ff;
+  box-shadow: -1px 1px 8px rgba(32, 38, 44, 0.12);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  cursor: pointer;
+  letter-spacing: 0.25px;
+
+  color: #1890ff;
+}

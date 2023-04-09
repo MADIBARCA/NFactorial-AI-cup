@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import AudioToTextConverter from './AudioToTextConverter';
+import Header from './layout/header/Header';
+import ChatbotApp from './pages/chatbot/ChatBotApp';
+import ImageGenerationForm from './pages/image-generation/ImageGenerationForm';
+import MainPage from './pages/MainPage/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <MainPage/>
+      {/* <AudioToTextConverter/> */}
+      {/* <ImageGenerationForm/>
+      <ChatbotApp/> */}
     </div>
   );
 }
