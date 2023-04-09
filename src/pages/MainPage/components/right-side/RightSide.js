@@ -5,6 +5,7 @@ import { useWhisper } from "@chengsokdara/use-whisper";
 
 import "./RightSide.css";
 import { keyPointsGenerator } from "../../../../api/axiosFunctions";
+import Loader from "../../../../layout/buttons/Loader";
 
 const RightSide = ({setSummary}) => {
   const { transcript, startRecording, stopRecording } = useWhisper({
@@ -18,7 +19,8 @@ const RightSide = ({setSummary}) => {
 
   const [isStopped, setIsStopped] = useState(true);
   const [note, setNote] = useState(null);
-  const [savedNotes, setSavedNotes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [fileName, setFileName] = useState("");
 
   const handleListen = () => {
     if (isStopped) {
@@ -30,16 +32,13 @@ const RightSide = ({setSummary}) => {
     }
   };
 
-  const handleSaveNote = () => {
-    setSavedNotes([...savedNotes, note]);
-    setNote("");
-  };
-
   //File Upload
   const uploadToClient = (event) => {
     if (event.target.files && event.target.files[0]) {
       console.log("Image is uploading started");
       const i = event.target.files[0];
+      setFileName(i.name)
+      console.log(i)
     } else {
       console.log("ERROR: IMAGE NOT UPLOADED");
     }
@@ -47,13 +46,16 @@ const RightSide = ({setSummary}) => {
 
   const goToGPT =  () => {
     console.log(note)
+    setLoading(true);
     keyPointsGenerator(transcript.text).then((resp) => {
       console.log(resp);
       if (resp.status === 200) {
-          setSummary(resp.data)
+          setSummary(resp.data);
+          setLoading(false);
       }
       else {
         console.log("Couldn't proceed");
+        setLoading(false);
       }
     });
   };
@@ -75,9 +77,9 @@ const RightSide = ({setSummary}) => {
           </div>
           <div className="mainPageRightSideInputBoxRightSide">
             {isStopped ? <span>🎙️</span> : <span>🛑🎙️</span>}
-            <button onClick={handleSaveNote} disabled={!note} className="audioActionBtn">
+            {/* <button onClick={handleSaveNote} disabled={!note} className="audioActionBtn">
               Save Note
-            </button>
+            </button> */}
             {isStopped ? (
               <button onClick={() => setIsStopped(false)} className="audioActionBtn">Start</button>
             ) : (
@@ -87,20 +89,20 @@ const RightSide = ({setSummary}) => {
         </div>
 
         {transcript.text && isStopped && (
-          <button onClick={goToGPT} className="mainPageRightSideSummarizeBtn">Summarize audio</button>
+          loading? <Loader/> : <button onClick={goToGPT} className="mainPageRightSideSummarizeBtn">Summarize audio</button>
         )}
 
         <div className="mainPageRightSideUploadFile">
-          <h3>Or upload the audio file of the recorded meeting</h3>
+          <h3>Or upload the audio file of the recorded meeting<span>(coming soon)</span></h3>
           <div className="mainPageRightSideUploadFileBox">
             <p className="mainPageRightSideUploadFileGrayTxt">
-              {" "}
-              MP3. Max 100mb.
+              {fileName? `Added ${fileName}`: "MP3. Max 25mb."}
+            
             </p>
             <div>
               <img src={UploadIcon} />
               <p>Choose File</p>
-              <input type="file" name="audio" accept="mp3/*" />
+              <input type="file" name="audio" accept=".mp3,audio/*" onChange={uploadToClient}/>
             </div>
           </div>
         </div>

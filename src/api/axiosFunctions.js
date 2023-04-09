@@ -21,7 +21,7 @@ export const keyPointsGenerator = async (question) => {
     url: "https://api.openai.com/v1/completions",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer " + API_KEY,
+      "Authorization": "Bearer " + `${API_KEY}`,
     },
     data: JSON.stringify(APIBody),
   };

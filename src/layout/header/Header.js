@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLogo from '../../assets/logo/meetkomek-logo.png';
+import MainLogo from '../../assets/logo/main-logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -7,9 +7,9 @@ const Header = () => {
     <div className='header'>
       <img src={MainLogo}/>
       <div className='headerRightSide'>
-        <p>Home</p>
+        {/* <p>Home</p>
         <p>Saved notes</p>
-        <button>Log Out</button>
+        <button>Log Out</button> */}
       </div>
     </div>
   )
