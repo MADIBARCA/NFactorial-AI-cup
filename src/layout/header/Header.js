@@ -6,11 +6,12 @@ const Header = () => {
   return (
     <div className='header'>
       <img src={MainLogo}/>
-      <div className='headerRightSide'>
-        {/* <p>Home</p>
+      <div className='beta'>Beta</div>
+      {/* <div className='headerRightSide'>
+        <p>Home</p>
         <p>Saved notes</p>
-        <button>Log Out</button> */}
-      </div>
+        <button>Log Out</button>
+      </div> */}
     </div>
   )
 }

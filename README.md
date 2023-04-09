@@ -1,10 +1,9 @@
 # nFactorial-AI-Cup-AppTrack
 
-## < Your Name >
+## Madi Abzhanov
 
 
-## < Your App's Name >
+## Talk Point
 
 
-## Typeform to submit:
-https://8ce4yw1bi3g.typeform.com/to/NXbENSKC
+
